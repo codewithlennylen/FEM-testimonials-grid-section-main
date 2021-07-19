@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+/* Universal Box Sizing with Inheritance */
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+
+body{
+    background-color:hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card{
+    /* Border-box is a property of CSS' box-sizing property; introduced in CSS3 */
+    /* box-sizing property allows us to include the padding and border in an element's total
+     width and height */
+
+     /* Before box-sizing, width and height were calculated as follows:
+        width + padding + border = actual width of an element
+        height + padding + border = actual height of an element         
+     */
+     /* min-width: auto; */
+     padding: 2rem;
+
+     /* With the CSS border-radius property, you can give any element "rounded corners". */
+     border-radius: 8px;
+     box-sizing: border-box;
+
+    /* Add Shadow to element. */
+    /* Horizontal Vertical Blur Color */
+     box-shadow: 1px 1px 5px grey;
+
+}
+
+.card-wide{
+    grid-column: span 2/auto;
+}
+
+.card-tall{
+    grid-row: span 2/auto;
+}
+
+
+.text-white{
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+.text-grey{
+    color: hsl(217, 19%, 35%);
+}
+
+.card-text{
+    opacity: 0.7;
+}
+
+.card-title{
+    /* background-color: red; */
+    /* padding: top right bottom left */
+    /* padding: 0px 0px 10px 0px; */    
+    /* margin: top right bottom left */
+    margin: 0px 0px 10px 0px;
+}
+
+.card-header{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-name{
+    margin-left: 1rem;
+}
+
+.card-header .verified{
+    opacity: 0.5;
+}
+
+.card-header p{
+    margin: 0px;
+}
+
+.card-header img{
+    /* use border-radius property to add rounded corners to an image. 50% makes the image circular */
+    border-radius: 50%;
+}
